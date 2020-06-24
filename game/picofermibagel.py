@@ -8,8 +8,19 @@ from typing import List
 def play(number_of_digits: int):
     """
     Click cmd line tool to determine number of digits in the number you are guessing for Pico Fermi Bagel
-    Ex: python picofermibagel.py --number_of_digits 4
+    Ex: python picofermibagel.py --number_of_digits 5
     """
+    intro_string = """
+    This is a python implementation of the classic number guessing game Pico
+    Permi Bagel. The player tries to guess what number the computer is thinking
+    of. A F (Fermi) means the digit is in the right place. A P (Pico) means the
+    digit is in the number but in the wrong place. A B (Bagel) means the digit
+    is not in the number. Example: Computer's number = 1234, Player guesses
+    4278. The player's guess is a P, F, B, B. The default number of digits is
+    4. Up the difficulty by playing with more digits ex: python
+    picofermibagel.py --number_of_digits 5
+    """
+    print(intro_string)
     win = False
     while not win:
       win = pfb(number_of_digits)
